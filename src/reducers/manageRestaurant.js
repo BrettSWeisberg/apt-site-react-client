@@ -5,8 +5,8 @@ export default function manageRestaurants(state = {
 
 
 
-    case 'ADD_RESTAURANT':
-      debugger
+    case 'ADD_BUILDING':
+        debugger
           let restaurantId = Math.random()
 
         const restaurant = {

@@ -21,13 +21,16 @@ class RestaurantInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.addApartment(data);
     var data = {
       name:this.state.name,
       address: this.state.address,
       description: this.state.description,
       units: this.state.units
-    }
+    };
+
+    this.props.addApartment(data);
+
+    
     this.setState({
       name: '',
       address: '',
