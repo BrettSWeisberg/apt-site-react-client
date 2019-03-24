@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class RestaurantInput extends Component {
+class BuildingInput extends Component {
   constructor(props) {
     super(props)
   this.state = {
@@ -30,7 +30,7 @@ class RestaurantInput extends Component {
 
     this.props.addApartment(data);
 
-    
+
     this.setState({
       name: '',
       address: '',
@@ -84,4 +84,4 @@ class RestaurantInput extends Component {
   }
 };
 
-export default RestaurantInput;
+export default BuildingInput;

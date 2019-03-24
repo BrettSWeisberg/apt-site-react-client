@@ -9,11 +9,11 @@ class ReviewsContainer extends Component {
       <div>
         <ReviewInput
           addReview={this.props.addReview}
-          restaurantId={this.props.restaurant.id}
+          apartmentId={this.props.apartment.id}
         />
         <Reviews
           reviews={this.props.reviews}
-          restaurantId={this.props.restaurant.id}
+          apartmentId={this.props.apartment.id}
           deleteReview={this.props.deleteReview}
         />
       </div>

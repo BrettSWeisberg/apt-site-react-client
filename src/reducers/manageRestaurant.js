@@ -1,5 +1,5 @@
 export default function manageRestaurants(state = {
-  restaurants: [], reviews: []
+  buidlings: [], reviews: []
 }, action) {
   switch (action.type) {
 
@@ -9,13 +9,15 @@ export default function manageRestaurants(state = {
         debugger
           let restaurantId = Math.random()
 
-        const restaurant = {
+        const building = {
           id: restaurantId,
-          name: action.payload,
-
+          name: action.payload.name,
+          description: action.payload.description,
+          address: action.payload.address,
+          units: action.payload.units
         }
 
-        return { ...state, restaurants: [...state.restaurants, restaurant]}
+        return { ...state, restaurants: [...state.restaurants, building]}
 
       case 'DELETE_RESTAURANT':
            const restaurants = state.restaurants.filter(restaurant => restaurant.id !== action.payload);
