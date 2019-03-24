@@ -3,12 +3,13 @@ import Building from './Building'
 
 class Buildings extends Component {
 
-  renderBuildings = () => { 
+  renderBuildings = () => {
     return  this.props.buildings.map(building =>
      <Building key={building.id} delete={this.props.delete} building={building} />)
   }
 
   render() {
+
     return(
       <ul>
         {this.renderBuildings()}

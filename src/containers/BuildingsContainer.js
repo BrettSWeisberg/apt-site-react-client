@@ -8,7 +8,7 @@ class BuildingsContainer extends Component {
 
 
   render() {
-    debugger
+    
     return (
       <div>
         <BuildingInput addBuilding={this.props.addBuilding} />

@@ -11,7 +11,10 @@ class Building extends Component {
 
       <div>
         <li>
-          {building.name}
+          <div>Name:{building.name}</div>
+          <div>address:{building.address}</div>
+          <div>description:{building.description}</div>
+          <div>Units:{building.units}</div>
           <button onClick={() => this.props.delete(building.id)}> X </button>
           <ReviewsContainer building={building}/>
         </li>

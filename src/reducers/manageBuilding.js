@@ -1,27 +1,27 @@
-export default function manageRestaurants(state = {
-  buidlings: [], reviews: []
+export default function manageBuildings(state = {
+  buildings: [], reviews: []
 }, action) {
   switch (action.type) {
 
 
 
     case 'ADD_BUILDING':
-        debugger
-          let restaurantId = Math.random()
+
+          let buildingId = Math.random()
 
         const building = {
-          id: restaurantId,
+          id: buildingId,
           name: action.payload.name,
           description: action.payload.description,
           address: action.payload.address,
           units: action.payload.units
         }
 
-        return { ...state, restaurants: [...state.restaurants, building]}
+        return { ...state, buildings: [...state.buildings, building]}
 
       case 'DELETE_RESTAURANT':
-           const restaurants = state.restaurants.filter(restaurant => restaurant.id !== action.payload);
-            return { ...state, restaurants}
+           const buildings = state.buildings.filter(building => building.id !== action.payload);
+            return { ...state, buildings}
 
       case 'ADD_REVIEW':
 
