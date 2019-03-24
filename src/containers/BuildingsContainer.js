@@ -8,10 +8,11 @@ class BuildingsContainer extends Component {
 
 
   render() {
+    debugger
     return (
       <div>
-        <BuildingInput addApartment={this.props.addApartment} />
-        <Buildings apartments={this.props.apartments} delete={this.props.delete} />
+        <BuildingInput addBuilding={this.props.addBuilding} />
+        <Buildings buildings={this.props.buildings} delete={this.props.delete} />
       </div>
     )
   }
@@ -25,7 +26,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
 
-  addApartment: apartment => dispatch({type: "ADD_BUILDING", payload: apartment }),
+  addBuilding: building => dispatch({type: "ADD_BUILDING", payload: building }),
    delete: id => dispatch({type: 'DELETE_RESTAURANT', payload: id })
 })
 
