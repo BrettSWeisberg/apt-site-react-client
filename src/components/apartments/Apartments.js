@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
-import Review from './Review';
+import Apartment from './Apartment';
 
-class Reviews extends Component {
+class Apartments extends Component {
 
   render() {
 
@@ -11,7 +11,7 @@ class Reviews extends Component {
     const associatedReviews = reviews.filter(review => review.buildingId === buildingId);
 
     const reviewList = associatedReviews.map((review, index) => {
-      return <Review key={index} review={review} deleteReview={deleteReview} />
+      return <Apartment key={index} review={review} deleteReview={deleteReview} />
     })
 
     return (
@@ -25,4 +25,4 @@ class Reviews extends Component {
 
 };
 
-export default Reviews;
+export default Apartments;

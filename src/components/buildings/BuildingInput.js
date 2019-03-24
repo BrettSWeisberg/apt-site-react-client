@@ -41,7 +41,9 @@ class BuildingInput extends Component {
 
   render() {
     return (
+
       <div>
+      <h1>Create Apartment Buildings Below:</h1>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
         <label>Name:</label>
           <input

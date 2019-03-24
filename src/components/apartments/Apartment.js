@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Review extends Component {
+class Apartment extends Component {
 
 
   handleOnClick = () => {
@@ -20,4 +20,4 @@ class Review extends Component {
 
 };
 
-export default Review;
+export default Apartment;
