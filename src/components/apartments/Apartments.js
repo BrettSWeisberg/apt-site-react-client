@@ -6,18 +6,18 @@ class Apartments extends Component {
 
   render() {
 
-    const { reviews, buildingId, deleteReview } = this.props;
+    const { apartments, buildingId, deleteReview } = this.props;
 
-    const associatedReviews = reviews.filter(review => review.buildingId === buildingId);
-
-    const reviewList = associatedReviews.map((review, index) => {
-      return <Apartment key={index} review={review} deleteReview={deleteReview} />
+    const associatedApartments = apartments.filter(apartment => apartment.buildingId === buildingId);
+    
+    const apartmentList = associatedApartments.map((apartment, index) => {
+      return <Apartment key={index} apartment={apartment} deleteReview={deleteReview} />
     })
 
     return (
       <div>
         <ul>
-          {reviewList}
+          {apartmentList}
         </ul>
       </div>
     );

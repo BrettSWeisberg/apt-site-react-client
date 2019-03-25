@@ -1,5 +1,5 @@
 export default function manageBuildings(state = {
-  buildings: [], reviews: []
+  buildings: [], apartments: []
 }, action) {
   switch (action.type) {
 
@@ -23,18 +23,22 @@ export default function manageBuildings(state = {
            const buildings = state.buildings.filter(building => building.id !== action.payload);
             return { ...state, buildings}
 
-      case 'ADD_REVIEW':
+      case 'ADD_APARTMENT':
+      
+          let apartmentID = Math.random()
 
-          let reviewId = Math.random()
-
-          const review = {
-
-            reviewId: reviewId,
-            text: action.review.text,
-            restaurantId: action.review.restaurantId
+          const apartment = {
+            apartmentID: apartmentID,
+            buildingID: action.payload.buildingId,
+            name:action.payload.aptData.name,
+            sf: action.payload.aptData.sf,
+            baths: action.payload.aptData.baths,
+            rooms: action.payload.aptData.rooms,
+            description:action.payload.aptData.description,
+            price: action.payload.aptData.price,
           }
 
-          return { ...state, reviews: [...state.reviews, review]}
+          return { ...state, apartments: [...state.apartments, apartment]}
 
           case 'DELETE_REVIEW':
             debugger

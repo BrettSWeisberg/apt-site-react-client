@@ -22,8 +22,8 @@ class ApartmentInput extends Component {
   }
 
   handleOnSubmit = event => {
+
     event.preventDefault();
-    debugger
     var aptData = {
       name:this.state.name,
       sf: this.state.sf,
@@ -32,6 +32,7 @@ class ApartmentInput extends Component {
       description:this.state.description,
       price: this.state.price
     }
+    
     this.props.addApartment({aptData, buildingId: this.props.buildingId });
     this.setState({
       name:'',
@@ -63,7 +64,7 @@ class ApartmentInput extends Component {
        <input
          type="number"
          name="sf"
-         value={this.state.address}
+         value={this.state.sf}
          onChange={(event) => this.handleOnChange(event)} />
        <br/>
 
@@ -71,7 +72,7 @@ class ApartmentInput extends Component {
        <input
          type="number"
          name="rooms"
-         value={this.state.description}
+         value={this.state.rooms}
          onChange={(event) => this.handleOnChange(event)} />
        <br/>
 
@@ -79,21 +80,21 @@ class ApartmentInput extends Component {
        <input
          type="number"
          name="baths"
-         value={this.state.description}
+         value={this.state.baths}
          onChange={(event) => this.handleOnChange(event)} />
        <br/>
        <label>Price:</label>
        <input
          type="number"
          name="price"
-         value={this.state.units}
+         value={this.state.price}
          onChange={(event) => this.handleOnChange(event)} />
        <br/>
        <label>Description:</label>
        <input
          type="text"
          name="description"
-         value={this.state.units}
+         value={this.state.description}
          onChange={(event) => this.handleOnChange(event)} />
        <br/>
 

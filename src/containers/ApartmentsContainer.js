@@ -12,7 +12,7 @@ class ApartmentsContainer extends Component {
           buildingId={this.props.building.id}
         />
         <Apartments
-          reviews={this.props.reviews}
+          apartments={this.props.apartments}
           buildingId={this.props.building.id}
           deleteReview={this.props.deleteReview}
         />
@@ -21,12 +21,12 @@ class ApartmentsContainer extends Component {
   }
 }
 
-const mapStateToProps = ({reviews}) => {
-  return {reviews}
+const mapStateToProps = ({apartments}) => {
+  return {apartments}
 }
 
 const mapDispatchToProps = dispatch => ({
-  addApartment: review => dispatch({type: 'ADD_REVIEW', review}),
+  addApartment: apartment => dispatch({type: 'ADD_APARTMENT', payload: apartment}),
   deleteReview: reviewId => dispatch({type: 'DELETE_REVIEW', reviewId})
 })
 

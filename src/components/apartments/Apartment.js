@@ -8,10 +8,11 @@ class Apartment extends Component {
   }
 
   render() {
+    debugger
     return (
       <div>
         <li>
-          {this.props.review.text}
+          {this.props.apartment.name}
         </li>
         <button onClick={this.handleOnClick}> x </button>
       </div>
