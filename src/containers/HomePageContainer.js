@@ -14,4 +14,4 @@ class HomePageContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePageContainer)
+export default HomePageContainer

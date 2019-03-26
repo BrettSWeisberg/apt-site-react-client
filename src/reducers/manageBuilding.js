@@ -19,7 +19,7 @@ export default function manageBuildings(state = {
 
         return { ...state, buildings: [...state.buildings, building]}
 
-      case 'DELETE_RESTAURANT':
+      case 'DELETE_BUILDING':
            const buildings = state.buildings.filter(building => building.id !== action.payload);
             return { ...state, buildings}
 
@@ -37,11 +37,11 @@ export default function manageBuildings(state = {
             description:action.payload.aptData.description,
             price: action.payload.aptData.price,
           }
-          
+
           return { ...state, apartments: [...state.apartments, apartment]}
 
           case 'DELETE_REVIEW':
-            debugger
+
               const reviews = state.reviews.filter(review => review.reviewId !== action.reviewId);
 
               return {...state, reviews }

@@ -14,13 +14,13 @@ class Apartments extends Component {
     })
     
     return (
-
       <div>
         <ul>
           {apartmentList}
         </ul>
       </div>
     );
+
   }
 
 };
