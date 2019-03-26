@@ -5,16 +5,16 @@ import Apartment from './Apartment';
 class Apartments extends Component {
 
   render() {
-
     const { apartments, buildingId, deleteReview } = this.props;
 
     const associatedApartments = apartments.filter(apartment => apartment.buildingId === buildingId);
-    
+
     const apartmentList = associatedApartments.map((apartment, index) => {
       return <Apartment key={index} apartment={apartment} deleteReview={deleteReview} />
     })
-
+    
     return (
+
       <div>
         <ul>
           {apartmentList}

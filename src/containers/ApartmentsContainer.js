@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 class ApartmentsContainer extends Component {
   render() {
+    
     return (
       <div>
         <ApartmentInput

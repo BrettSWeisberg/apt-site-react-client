@@ -24,7 +24,7 @@ export default function manageBuildings(state = {
             return { ...state, buildings}
 
       case 'ADD_APARTMENT':
-      
+
           let apartmentID = Math.random()
 
           const apartment = {
@@ -37,7 +37,7 @@ export default function manageBuildings(state = {
             description:action.payload.aptData.description,
             price: action.payload.aptData.price,
           }
-
+          
           return { ...state, apartments: [...state.apartments, apartment]}
 
           case 'DELETE_REVIEW':

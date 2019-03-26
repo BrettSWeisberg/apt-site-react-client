@@ -32,7 +32,7 @@ class ApartmentInput extends Component {
       description:this.state.description,
       price: this.state.price
     }
-    
+
     this.props.addApartment({aptData, buildingId: this.props.buildingId });
     this.setState({
       name:'',
