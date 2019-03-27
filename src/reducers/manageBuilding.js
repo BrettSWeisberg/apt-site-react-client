@@ -16,6 +16,12 @@ export default function manageBuildings(state = {
           address: action.payload.address,
           units: action.payload.units
         }
+        // 1. what are you sending
+        //2. where am  i sending the data
+        //3. create fetch or how does it work
+
+
+        fetch("/api/addBuilding")
 
         return { ...state, buildings: [...state.buildings, building]}
 
@@ -40,11 +46,11 @@ export default function manageBuildings(state = {
 
           return { ...state, apartments: [...state.apartments, apartment]}
 
-          case 'DELETE_REVIEW':
+          case 'DELETE_APARTMENT':
+          
+              const apartments = state.apartments.filter(apartment => apartment.apartmentID !== action.payload);
 
-              const reviews = state.reviews.filter(review => review.reviewId !== action.reviewId);
-
-              return {...state, reviews }
+              return {...state, apartments }
 
     default:
       return state;

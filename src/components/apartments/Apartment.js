@@ -4,11 +4,12 @@ class Apartment extends Component {
 
 
   handleOnClick = () => {
-    this.props.deleteReview(this.props.review.reviewId)
+    
+    this.props.deleteApartment(this.props.apartment.apartmentID)
   }
 
   render() {
-    debugger
+
     return (
       <div>
         <li>
@@ -19,7 +20,7 @@ class Apartment extends Component {
           <div>description: {this.props.apartment.description}</div>
           <div>price: {this.props.apartment.price}</div>
         </li>
-        <button onClick={this.handleOnClick}> x </button>
+        <button onClick={this.handleOnClick}> Delete </button>
       </div>
     );
   }

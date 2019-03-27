@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 class ApartmentsContainer extends Component {
   render() {
-    
+
     return (
       <div>
         <ApartmentInput
@@ -15,7 +15,7 @@ class ApartmentsContainer extends Component {
         <Apartments
           apartments={this.props.apartments}
           buildingId={this.props.building.id}
-          deleteReview={this.props.deleteReview}
+          deleteApartment={this.props.deleteApartment}
         />
       </div>
     );
@@ -28,7 +28,7 @@ const mapStateToProps = ({apartments}) => {
 
 const mapDispatchToProps = dispatch => ({
   addApartment: apartment => dispatch({type: 'ADD_APARTMENT', payload: apartment}),
-  deleteReview: reviewId => dispatch({type: 'DELETE_REVIEW', reviewId})
+  deleteApartment: apartmentID => dispatch({type: 'DELETE_APARTMENT', apartmentID})
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ApartmentsContainer)
