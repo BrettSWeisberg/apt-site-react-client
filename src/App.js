@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BuildingsContainer from './containers/BuildingsContainer';
 import HomePageContainer from './containers/HomePageContainer';
 import AboutUs from './components/static/AboutUs';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -16,9 +16,11 @@ class App extends Component {
             <li><Link to={'/aboutus'} className="nav-link">About Us</Link></li>
           </ul>
           </nav>
-          <Route path='/' component={HomePageContainer} />
+          <Switch>
+          <Route exact path='/' component={HomePageContainer} />
           <Route path='/building/new' component={BuildingsContainer} />
           <Route path='/aboutus' component={AboutUs} />
+          </Switch>
         </Router>
       </div>
     );
