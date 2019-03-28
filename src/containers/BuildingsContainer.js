@@ -3,6 +3,7 @@ import BuildingInput from '../components/buildings/BuildingInput'
 import Buildings from '../components/buildings/Buildings'
 import { connect } from 'react-redux'
 
+
 class BuildingsContainer extends Component {
 
 

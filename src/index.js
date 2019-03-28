@@ -6,11 +6,11 @@ import * as serviceWorker from './serviceWorker';
 
 import manageBuilding from './reducers/manageBuilding'
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux'
 import { BrowserRouter } from 'react-router-dom'
+import thunk from 'redux-thunk';
 
-
-const store = createStore(manageBuilding)
+const store = createStore(manageBuilding, applyMiddleware(thunk))
 ReactDOM.render(
   <BrowserRouter>
   <Provider store={store}>
