@@ -7,7 +7,7 @@ import axios from 'axios'; ///
 //  return {type: "ADD_BUILDING", payload: building }
 
 export function fetchBuildings(){
-  const request = axios.get('http://localhost:3001/buildings');
+  const request = Axios.get('http://localhost:3001/buildings');
 
   return (dispatch) => {
     request.then(buildings => {
