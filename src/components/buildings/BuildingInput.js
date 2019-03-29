@@ -43,7 +43,7 @@ class BuildingInput extends Component {
     return (
 
   <section class= "section">
-    <span class = "is-medium">
+    <span class= "is-medium">
       <label class= "label">Create Apartment Buildings Below:</label>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <div class="field">

@@ -1,20 +1,34 @@
 import axios from 'axios'; ///
 
+var url = 'http://localhost:3001/buildings'
 
 //const baseUrl = 'http://localhost:3001'
 
 //export const addBuilding = (building) => {
 //  return {type: "ADD_BUILDING", payload: building }
 
-export function fetchBuildings(){
-  const request = Axios.get('http://localhost:3001/buildings');
+export function fetchBuildings() {
+  let data = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }
 
-  return (dispatch) => {
-    request.then(buildings => {
-    //  dispatch ({type:'FETCH_BUILDINGS', payload: data})
-       this.setState({buildings: buidlings.data})
-  });
-}
+  return dispatch => {
+    fetch(url, data)
+      .then(response => response.json())
+      .then(buildings => {
+        debugger
+
+        dispatch({
+            type: "FETCH_BUILDINGS",
+            payload: buildings
+          })
+      })
+      .catch(err => err)
+  }
 }
 //   let data = {
 //     method: 'POST',

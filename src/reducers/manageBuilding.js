@@ -3,11 +3,11 @@ export default function manageBuildings(state = {
 }, action) {
   switch (action.type) {
 
-
+    case 'FETCH_BUILDINGS':
+      return { ...state, buildings: action.payload }
 
     case 'ADD_BUILDING':
-
-          let buildingId = Math.random()
+        let buildingId = Math.random()
 
         const building = {
           id: buildingId,
