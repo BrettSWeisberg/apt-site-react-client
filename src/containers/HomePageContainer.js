@@ -4,8 +4,18 @@ import { connect } from 'react-redux'
 
 
 class HomePageContainer extends Component {
-  render() {
 
+  // componentDidMount: function () {
+  //      return
+  //    }
+
+  // onLoad: function () {
+  //
+  // }
+//apartments{this.state.apartment} apartments{this.state.buidling}
+
+  render() {
+    
     return (
       <div>
         <HomeList />
@@ -14,4 +24,10 @@ class HomePageContainer extends Component {
   }
 }
 
-export default HomePageContainer
+const mapStateToProps = state => {
+  return {
+    buildings: state.buildings,
+    apartments: state.apartments
+  }
+}
+export default connect(mapStateToProps)(HomePageContainer)

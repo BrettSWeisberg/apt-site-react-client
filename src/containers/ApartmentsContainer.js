@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ApartmentInput from '../components/apartments/ApartmentInput'
 import Apartments from '../components/apartments/Apartments'
 import { connect } from 'react-redux'
-import { applyMiddleware } from "redux"
+
 class ApartmentsContainer extends Component {
   render() {
 

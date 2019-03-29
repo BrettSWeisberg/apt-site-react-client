@@ -4,7 +4,7 @@ class HomeList extends Component {
 
 
   render() {
-    debugger
+    
     return (
       <div>
       <h1>Welcome!</h1>
