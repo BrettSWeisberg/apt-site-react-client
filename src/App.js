@@ -5,24 +5,24 @@ import HomePageContainer from './containers/HomePageContainer';
 import AboutUs from './components/static/AboutUs';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
- import fetchBuildings from './actions/actions'
+ //import fetchBuildings from './actions/actions'
 
 import 'bulma/css/bulma.css'
 
 class App extends Component {
-  async componentWillMount() {
-    this.actions.fetchBuildings();
-  }
+  //async componentWillMount() {
+//    this.actions.fetchBuildings();
+//  }
   render() {
     return (
       <div className="App">
         <Router>
         <nav>
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <div class="navbar-item"><Link to={'/'} className="nav-link">Home</Link></div>
-            <div class="navbar-item"><Link to={'/building/new'} className="nav-link">Create Building</Link></div>
-            <div class="navbar-item"><Link to={'/aboutus'} className="nav-link">About Us</Link></div>
+        <div class="navbar-end">
+          <div class="buttons">
+            <a class="button is-primary"><Link to={'/'} className="nav-link">Home</Link></a>
+            <a class="button is-primary"><Link to={'/building/new'} className="nav-link">Create Building</Link></a>
+            <a class="button is-primary"><Link to={'/aboutus'} className="nav-link">About Us</Link></a>
             </div>
           </div>
          </nav>

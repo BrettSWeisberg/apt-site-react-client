@@ -12,7 +12,7 @@ class BuildingsContainer extends Component {
   render() {
 
     return (
-      <div>
+      <div class="container has-text-centered">
         <BuildingInput addBuilding={this.props.addBuilding} />
         <Buildings buildings={this.props.buildings} delete={this.props.delete} />
       </div>

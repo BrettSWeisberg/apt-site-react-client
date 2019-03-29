@@ -9,7 +9,7 @@ class Building extends Component {
 
     return (
 
-      <div>
+      <div class = "menu">
         <li>
           <div>Name:{building.name}</div>
           <div>address:{building.address}</div>

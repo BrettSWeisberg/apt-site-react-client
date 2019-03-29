@@ -42,34 +42,37 @@ class BuildingInput extends Component {
   render() {
     return (
 
-      <div>
-      <h1>Create Apartment Buildings Below:</h1>
+  <section class= "section">
+    <span class = "is-medium">
+      <label class= "label">Create Apartment Buildings Below:</label>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
-        <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={(event) => this.handleOnChange(event)} />
-
+          <div class="field">
+            <label class= "label">Name:</label>
+              <input
+                type="text"
+                name="name"
+                value={this.state.name}
+                onChange={(event) => this.handleOnChange(event)} />
+            </div>
           <br/>
-
-          <label>Address:</label>
+        <div class="field">
+          <label class= "label">Address:</label>
           <input
             type="text"
             name="address"
             value={this.state.address}
             onChange={(event) => this.handleOnChange(event)} />
+          </div>
           <br/>
 
-          <label>Description:</label>
+          <label class= "label">Description:</label>
           <input
             type="text"
             name="description"
             value={this.state.description}
             onChange={(event) => this.handleOnChange(event)} />
           <br/>
-          <label>Units:</label>
+          <label class= "label">Units:</label>
           <input
             type="number"
             name="units"
@@ -81,7 +84,8 @@ class BuildingInput extends Component {
 
             <input type="submit" value="Submit" />
         </form>
-      </div>
+        </span>
+      </section>
     );
   }
 };
