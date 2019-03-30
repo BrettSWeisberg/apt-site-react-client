@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { fetchBuildings } from '../../actions/actions'
+import HomeBuilding from './HomeBuilding'
+
 
 class HomeList extends Component {
   componentWillMount() {
     this.props.fetchBuildings()
   }
-
+//{ buildings.map(building => <div>{ building.name }</div>) }
   render() {
     let { buildings } = this.props
 
     return (
       <div>
-      <h1>Welcome!</h1>
-        { buildings.map(building => <div>{ building.name }</div>) }
+
+        { buildings.map(building => <HomeBuilding building={building}/>) }
       </div>
     );
   }

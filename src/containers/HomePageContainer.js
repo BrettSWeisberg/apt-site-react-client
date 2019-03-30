@@ -5,19 +5,11 @@ import { connect } from 'react-redux'
 
 class HomePageContainer extends Component {
 
-  // componentDidMount: function () {
-  //      return
-  //    }
-
-  // onLoad: function () {
-  //
-  // }
-//apartments{this.state.apartment} apartments{this.state.buidling}
-
   render() {
-    
+
     return (
       <div>
+      <h1>Welcome!</h1>
         <HomeList />
       </div>
     )

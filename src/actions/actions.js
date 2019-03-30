@@ -20,7 +20,7 @@ export function fetchBuildings() {
     fetch(url, data)
       .then(response => response.json())
       .then(buildings => {
-        debugger
+        
 
         dispatch({
             type: "FETCH_BUILDINGS",
