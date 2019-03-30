@@ -7,21 +7,15 @@ export default function manageBuildings(state = {
       return { ...state, buildings: action.payload }
 
     case 'ADD_BUILDING':
-        let buildingId = Math.random()
+      //  let buildingId = Math.random()
 
         const building = {
-          id: buildingId,
+        //  id: buildingId,
           name: action.payload.name,
           description: action.payload.description,
           address: action.payload.address,
           units: action.payload.units
         }
-        // 1. what are you sending
-        //2. where am  i sending the data
-        //3. create fetch or how does it work
-
-
-        fetch("/api/addBuilding")
 
         return { ...state, buildings: [...state.buildings, building]}
 

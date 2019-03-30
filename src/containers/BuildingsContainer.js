@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import BuildingInput from '../components/buildings/BuildingInput'
 import Buildings from '../components/buildings/Buildings'
 import { connect } from 'react-redux'
-// import {addBuilding} from '../actions/actions'
+import { bindActionCreators } from 'redux'
+ import * as { actionCreators } from '../actions/actions'
 
 
 class BuildingsContainer extends Component {
@@ -26,10 +27,15 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+// const mapDispatchToProps = dispatch => ({
+//
+//   addBuilding: building => dispatch({type: "ADD_BUILDING", payload: building })
+//    delete: id => dispatch({type: 'DELETE_BUILDING', payload: id })
+// })
 
-  addBuilding: building => dispatch({type: "ADD_BUILDING", payload: building }), // addBuilding()
-   delete: id => dispatch({type: 'DELETE_BUILDING', payload: id })
-})
+const mapDispatchToProps = dispatch => bindActionCreators({
+   addBuilding
+}, dispatch)
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(BuildingsContainer)

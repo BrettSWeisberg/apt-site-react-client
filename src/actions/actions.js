@@ -1,11 +1,4 @@
-import axios from 'axios'; ///
-
 var url = 'http://localhost:3001/buildings'
-
-//const baseUrl = 'http://localhost:3001'
-
-//export const addBuilding = (building) => {
-//  return {type: "ADD_BUILDING", payload: building }
 
 export function fetchBuildings() {
   let data = {
@@ -20,8 +13,6 @@ export function fetchBuildings() {
     fetch(url, data)
       .then(response => response.json())
       .then(buildings => {
-        
-
         dispatch({
             type: "FETCH_BUILDINGS",
             payload: buildings
@@ -30,40 +21,27 @@ export function fetchBuildings() {
       .catch(err => err)
   }
 }
-//   let data = {
-//     method: 'POST',
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json',
-//       'Authorization': sessionStorage.jwt
-//     },
-//     body: JSON.stringify({ building })
-//   }
-//
-//   return dispatch => {
-//     fetch(`${ baseUrl }/buildings`, data)
-//       .then(response => response.json())
-//       .then(building => dispatch({
-//         type: 'ADD_BUILDING',
-//         payload: {
-//           name: action.payload.name,
-//           description: action.payload.description,
-//           address: action.payload.address,
-//           units: action.payload.units
-//         }
-//       }))
-//       .catch(err => err)
-//   }
-// }
-// let building = {
-// name: action.payload.name,
-// description: action.payload.description,
-// address: action.payload.address,
-// units: action.payload.units
-// }
-// axios.post('http://localhost:3001/building', { building })
-//      .then(res => {
-//        console.log(res);
-//        console.log(res.data);
-//      })
-//  }
+
+export const addBuilding = building => {
+  let data = {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ building })
+  }
+
+  return dispatch => {
+    fetch(`${ url }/buildings`, data)
+      .then(response => response.json())
+
+      debugger
+      .then(building => dispatch({
+
+        type: 'ADD_BUILDING',
+        payload: building
+      }))
+      .catch(err => err)
+  }
+}
