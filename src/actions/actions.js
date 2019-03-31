@@ -33,11 +33,10 @@ export const addBuilding = building => {
   }
 
   return dispatch => {
-    debugger
+
     fetch(url, data)
       .then(response => response.json())
-
-      .then(todo => dispatch({
+      .then(building => dispatch({
         type: 'ADD_BUILDING',
         payload: building
       }))
