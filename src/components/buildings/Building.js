@@ -9,13 +9,13 @@ class Building extends Component {
 
     return (
 
-      <div class = "menu">
+      <div className = "menu">
         <li>
           <div>Name:{building.name}</div>
           <div>address:{building.address}</div>
           <div>description:{building.description}</div>
           <div>Units:{building.units}</div>
-          <button onClick={() => this.props.delete(building.id)}> Delete </button>
+          <button onClick={() => this.props.deleteBuilding(building.id)}> Delete </button>
           <ApartmentsContainer building={building}/>
         </li>
       </div>

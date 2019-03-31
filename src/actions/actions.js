@@ -43,3 +43,24 @@ export const addBuilding = building => {
       .catch(err => err)
   }
 }
+
+export const deleteBuilding = id => {
+  let data = {
+    method: 'delete',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  }
+
+  return dispatch => {
+
+     fetch(`${ url }/${ id }`, data)
+      .then(response => response.json())
+      .then(building => dispatch({
+        type: 'DELETE_BUILDING',
+        payload: building
+      }))
+      .catch(err => err)
+  }
+}

@@ -3,7 +3,7 @@ import BuildingInput from '../components/buildings/BuildingInput'
 import Buildings from '../components/buildings/Buildings'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
- import { addBuilding } from '../actions/actions'
+ import { addBuilding, deleteBuilding } from '../actions/actions'
 
 
 class BuildingsContainer extends Component {
@@ -15,7 +15,7 @@ class BuildingsContainer extends Component {
     return (
       <div class="container has-text-centered">
         <BuildingInput addBuilding={this.props.addBuilding} />
-        <Buildings buildings={this.props.buildings} delete={this.props.delete} />
+        <Buildings buildings={this.props.buildings} deleteBuilding={this.props.deleteBuilding} />
       </div>
     )
   }
@@ -34,7 +34,8 @@ const mapStateToProps = state => {
 // })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-   addBuilding
+   addBuilding,
+   deleteBuilding
 }, dispatch)
 
 

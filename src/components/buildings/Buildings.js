@@ -5,7 +5,7 @@ class Buildings extends Component {
 
   renderBuildings = () => {
     return  this.props.buildings.map(building =>
-     <Building key={building.id} delete={this.props.delete} building={building} />)
+     <Building key={building.id} deleteBuilding={this.props.deleteBuilding} building={building} />)
   }
 
   render() {
