@@ -7,17 +7,18 @@ export default function manageBuildings(state = {
       return { ...state, buildings: action.payload }
 
     case 'ADD_BUILDING':
+      debugger
       //  let buildingId = Math.random()
 
-        const building = {
-        //  id: buildingId,
-          name: action.payload.name,
-          description: action.payload.description,
-          address: action.payload.address,
-          units: action.payload.units
-        }
+        // const building = {
+        // //  id: buildingId,
+        //   name: action.payload.name,
+        //   description: action.payload.description,
+        //   address: action.payload.address,
+        //   units: action.payload.units
+        // }
 
-        return { ...state, buildings: [...state.buildings, building]}
+        return { ...state, buildings: [...state.buildings, action.payload]}
 
       case 'DELETE_BUILDING':
            const buildings = state.buildings.filter(building => building.id !== action.payload);

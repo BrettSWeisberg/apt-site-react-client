@@ -42,12 +42,12 @@ class BuildingInput extends Component {
   render() {
     return (
 
-  <section class= "section">
-    <span class= "is-medium">
-      <label class= "label">Create Apartment Buildings Below:</label>
+  <section classNameName= "section">
+    <span className= "is-medium">
+      <label className= "label">Create Apartment Buildings Below:</label>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <div class="field">
-            <label class= "label">Name:</label>
+          <div className="field">
+            <label className= "label">Name:</label>
               <input
                 type="text"
                 name="name"
@@ -55,8 +55,8 @@ class BuildingInput extends Component {
                 onChange={(event) => this.handleOnChange(event)} />
             </div>
           <br/>
-        <div class="field">
-          <label class= "label">Address:</label>
+        <div className="field">
+          <label className= "label">Address:</label>
           <input
             type="text"
             name="address"
@@ -65,14 +65,14 @@ class BuildingInput extends Component {
           </div>
           <br/>
 
-          <label class= "label">Description:</label>
+          <label className= "label">Description:</label>
           <input
             type="text"
             name="description"
             value={this.state.description}
             onChange={(event) => this.handleOnChange(event)} />
           <br/>
-          <label class= "label">Units:</label>
+          <label className= "label">Units:</label>
           <input
             type="number"
             name="units"

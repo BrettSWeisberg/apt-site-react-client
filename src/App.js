@@ -18,11 +18,11 @@ class App extends Component {
       <div className="App">
         <Router>
         <nav>
-        <div class="navbar-end">
-          <div class="buttons">
-            <a class="button is-primary"><Link to={'/'} className="nav-link">Home</Link></a>
-            <a class="button is-primary"><Link to={'/building/new'} className="nav-link">Create Building</Link></a>
-            <a class="button is-primary"><Link to={'/aboutus'} className="nav-link">About Us</Link></a>
+        <div className="navbar-end">
+          <div className="buttons">
+            <div className="button is-primary"><Link to={'/'} className="nav-link">Home</Link></div>
+            <div className="button is-primary"><Link to={'/building/new'} className="nav-link">Create Building</Link></div>
+            <div className="button is-primary"><Link to={'/aboutus'} className="nav-link">About Us</Link></div>
             </div>
           </div>
          </nav>

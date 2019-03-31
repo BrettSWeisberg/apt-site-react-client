@@ -3,7 +3,7 @@ import BuildingInput from '../components/buildings/BuildingInput'
 import Buildings from '../components/buildings/Buildings'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
- import * as { actionCreators } from '../actions/actions'
+ import { addBuilding } from '../actions/actions'
 
 
 class BuildingsContainer extends Component {

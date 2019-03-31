@@ -9,7 +9,7 @@ class HomePageContainer extends Component {
 
     return (
       <div>
-      <h1 class = "title">Welcome!</h1>
+      <h1 className = "title">Welcome!</h1>
         <HomeList />
       </div>
     )
