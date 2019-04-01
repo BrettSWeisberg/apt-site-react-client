@@ -5,14 +5,11 @@ import HomePageContainer from './containers/HomePageContainer';
 import AboutUs from './components/static/AboutUs';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
- //import fetchBuildings from './actions/actions'
 
 import 'bulma/css/bulma.css'
 
 class App extends Component {
-  //async componentWillMount() {
-//    this.actions.fetchBuildings();
-//  }
+
   render() {
     return (
       <div className="App">

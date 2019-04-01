@@ -10,32 +10,20 @@ export default function manageBuildings(state = {
       return { ...state, buildings: [...state.buildings, action.payload]}
 
     case 'DELETE_BUILDING':
-    
       const buildings = state.buildings.filter(building => building.id !== action.payload.id);
       return { ...state, buildings}
 
-      case 'ADD_APARTMENT':
+      case 'FETCH_APARTMENTS':
+        return { ...state, apartments: action.payload }
 
-          let apartmentID = Math.random()
+    case 'ADD_APARTMENT':
 
-          const apartment = {
-            apartmentID: apartmentID,
-            buildingID: action.payload.buildingId,
-            name:action.payload.aptData.name,
-            sf: action.payload.aptData.sf,
-            baths: action.payload.aptData.baths,
-            rooms: action.payload.aptData.rooms,
-            description:action.payload.aptData.description,
-            price: action.payload.aptData.price,
-          }
+    debugger
+      return { ...state, apartments: [...state.apartments, action.payload]}
 
-          return { ...state, apartments: [...state.apartments, apartment]}
-
-          case 'DELETE_APARTMENT':
-
-              const apartments = state.apartments.filter(apartment => apartment.apartmentID !== action.payload);
-
-              return {...state, apartments }
+    case 'DELETE_APARTMENT':
+      const apartments = state.apartments.filter(apartment => apartment.apartmentID !== action.payload.id);
+      return {...state, apartments }
 
     default:
       return state;

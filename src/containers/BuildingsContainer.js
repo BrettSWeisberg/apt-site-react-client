@@ -3,7 +3,7 @@ import BuildingInput from '../components/buildings/BuildingInput'
 import Buildings from '../components/buildings/Buildings'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
- import { addBuilding, deleteBuilding } from '../actions/actions'
+ import { addBuilding, deleteBuilding } from '../actions/buildingActions'
 
 
 class BuildingsContainer extends Component {
@@ -13,7 +13,7 @@ class BuildingsContainer extends Component {
   render() {
 
     return (
-      <div class="container has-text-centered">
+      <div className="container has-text-centered">
         <BuildingInput addBuilding={this.props.addBuilding} />
         <Buildings buildings={this.props.buildings} deleteBuilding={this.props.deleteBuilding} />
       </div>

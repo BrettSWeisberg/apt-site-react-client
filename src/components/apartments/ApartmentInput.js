@@ -9,7 +9,8 @@ class ApartmentInput extends Component {
         baths: '',
         rooms: '',
         description:'',
-        price:''
+        price:'',
+        building_id: ''
       }
       this.handleOnChange = this.handleOnChange.bind(this);
       this.handleSubmit = this.handleOnSubmit.bind(this);
@@ -24,23 +25,26 @@ class ApartmentInput extends Component {
   handleOnSubmit = event => {
 
     event.preventDefault();
+
     var aptData = {
       name:this.state.name,
       sf: this.state.sf,
       baths: this.state.baths,
       rooms: this.state.rooms,
       description:this.state.description,
-      price: this.state.price
+      price: this.state.price,
+      building_id: this.props.buildingId
     }
 
-    this.props.addApartment({aptData, buildingId: this.props.buildingId });
+    this.props.addApartment(aptData);
     this.setState({
       name:'',
       sf:'',
       baths: '',
       rooms: '',
       description:'',
-      price:''
+      price:'',
+      building_id: ''
     });
   }
 
