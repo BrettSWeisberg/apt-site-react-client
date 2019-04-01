@@ -3,7 +3,7 @@ import ApartmentInput from '../components/apartments/ApartmentInput'
 import Apartments from '../components/apartments/Apartments'
 import { connect } from 'react-redux'
 
-//import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux'
 import { addApartment, deleteApartment } from '../actions/apartmentActions'
 
 class ApartmentsContainer extends Component {
@@ -30,24 +30,24 @@ const mapStateToProps = ({apartments}) => {
 }
 
 
-// const mapDispatchToProps = dispatch => bindActionCreators({
-//    addApartment,
-//    deleteApartment
-// }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({
+   addApartment,
+   deleteApartment
+}, dispatch)
 
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addApartment: (apartment) => {
-      let action = addApartment(apartment)
-      dispatch(action)
-    },
-    deleteApartment: () => {
-      let action = deleteApartment()
-      dispatch(action)
-    },
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addApartment: (apartment) => {
+//       let action = addApartment(apartment)
+//       dispatch(action)
+//     },
+//     deleteApartment: () => {
+//       let action = deleteApartment()
+//       dispatch(action)
+//     },
+//   }
+// }
 
 // const mapDispatchToProps = dispatch => ({
 //   addApartment: apartment => dispatch({type: 'ADD_APARTMENT', payload: apartment}),

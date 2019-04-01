@@ -7,6 +7,7 @@ export default function manageBuildings(state = {
       return { ...state, buildings: action.payload }
 
     case 'ADD_BUILDING':
+
       return { ...state, buildings: [...state.buildings, action.payload]}
 
     case 'DELETE_BUILDING':
@@ -17,8 +18,6 @@ export default function manageBuildings(state = {
         return { ...state, apartments: action.payload }
 
     case 'ADD_APARTMENT':
-
-    debugger
       return { ...state, apartments: [...state.apartments, action.payload]}
 
     case 'DELETE_APARTMENT':

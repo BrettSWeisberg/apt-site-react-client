@@ -26,7 +26,7 @@ class ApartmentInput extends Component {
 
     event.preventDefault();
 
-    var aptData = {
+    var apartment = {
       name:this.state.name,
       sf: this.state.sf,
       baths: this.state.baths,
@@ -36,7 +36,7 @@ class ApartmentInput extends Component {
       building_id: this.props.buildingId
     }
 
-    this.props.addApartment(aptData);
+    this.props.addApartment(apartment);
     this.setState({
       name:'',
       sf:'',

@@ -42,7 +42,7 @@ class BuildingInput extends Component {
   render() {
     return (
 
-  <section classNameName= "section">
+  <section className= "section">
     <span className= "is-medium">
       <label className= "label">Create Apartment Buildings Below:</label>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>

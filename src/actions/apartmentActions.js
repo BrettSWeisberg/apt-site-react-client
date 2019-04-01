@@ -23,7 +23,7 @@ export function fetchApartments() {
 }
 
 export const addApartment = apartment => {
-  debugger
+  
   let data = {
     method: 'POST',
     headers: {

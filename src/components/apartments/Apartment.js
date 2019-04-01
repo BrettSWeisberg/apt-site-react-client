@@ -4,12 +4,12 @@ class Apartment extends Component {
 
 
   handleOnClick = () => {
-    
+
     this.props.deleteApartment(this.props.apartment.apartmentID)
   }
 
   render() {
-
+    debugger
     return (
       <div>
         <li>
