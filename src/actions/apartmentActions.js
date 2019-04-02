@@ -23,7 +23,7 @@ export function fetchApartments() {
 }
 
 export const addApartment = apartment => {
-  
+
   let data = {
     method: 'POST',
     headers: {
@@ -47,6 +47,7 @@ export const addApartment = apartment => {
 }
 
 export const deleteApartment = id => {
+
   let data = {
     method: 'delete',
     headers: {
@@ -56,7 +57,7 @@ export const deleteApartment = id => {
   }
 
   return dispatch => {
-
+    
      fetch(`${ url }/${ id }`, data)
       .then(response => response.json())
       .then(apartment => dispatch({

@@ -27,12 +27,6 @@ const mapStateToProps = state => {
   }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//
-//   addBuilding: building => dispatch({type: "ADD_BUILDING", payload: building })
-//    delete: id => dispatch({type: 'DELETE_BUILDING', payload: id })
-// })
-
 const mapDispatchToProps = dispatch => bindActionCreators({
    addBuilding,
    deleteBuilding

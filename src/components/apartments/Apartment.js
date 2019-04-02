@@ -3,24 +3,21 @@ import React, { Component } from 'react';
 class Apartment extends Component {
 
 
-  handleOnClick = () => {
-
-    this.props.deleteApartment(this.props.apartment.apartmentID)
-  }
-
   render() {
-    debugger
+    const { apartment } = this.props;
+
     return (
+
       <div>
         <li>
-          <div>Name: {this.props.apartment.name}</div>
-          <div>Square Feet: {this.props.apartment.sf}</div>
-          <div>Baths: {this.props.apartment.baths}</div>
-          <div>rooms: {this.props.apartment.rooms}</div>
-          <div>description: {this.props.apartment.description}</div>
-          <div>price: {this.props.apartment.price}</div>
+          <div>Name: {apartment.name}</div>
+          <div>Square Feet: {apartment.sf}</div>
+          <div>Baths: {apartment.baths}</div>
+          <div>rooms: {apartment.rooms}</div>
+          <div>description: {apartment.description}</div>
+          <div>price: {apartment.price}</div>
+        <button onClick={() => this.props.deleteApartment(apartment.id)}> Delete </button>
         </li>
-        <button onClick={this.handleOnClick}> Delete </button>
       </div>
     );
   }

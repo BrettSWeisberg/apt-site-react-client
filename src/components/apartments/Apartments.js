@@ -6,9 +6,9 @@ class Apartments extends Component {
 
   render() {
     const { apartments, buildingId, deleteApartment } = this.props;
-    debugger
-    const associatedApartments = apartments.filter(apartment => apartment.building_id === buildingId);
 
+    const associatedApartments = apartments.filter(apartment => apartment.building_id === buildingId);
+    
     const apartmentList = associatedApartments.map((apartment, index) => {
       return <Apartment key={index} apartment={apartment} deleteApartment={deleteApartment} />
     })

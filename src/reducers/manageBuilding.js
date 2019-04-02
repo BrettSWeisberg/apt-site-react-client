@@ -21,7 +21,7 @@ export default function manageBuildings(state = {
       return { ...state, apartments: [...state.apartments, action.payload]}
 
     case 'DELETE_APARTMENT':
-      const apartments = state.apartments.filter(apartment => apartment.apartmentID !== action.payload.id);
+      const apartments = state.apartments.filter(apartment => apartment.id !== action.payload.id);
       return {...state, apartments }
 
     default:
