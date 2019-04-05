@@ -28,7 +28,9 @@ class BuildingInput extends Component {
       units: this.state.units
     };
 
+    console.log('A')
     this.props.addBuilding(data);
+    console.log('B')
 
 
     this.setState({
