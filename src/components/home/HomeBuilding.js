@@ -6,6 +6,7 @@ class HomeBuilding extends Component {
     super(props)
       this.state = {
         counter: 0,
+        input: '',
         feedback: []
 
       }
@@ -28,9 +29,9 @@ class HomeBuilding extends Component {
       feedback: [this.state.feedback, event.target.value]
 
     });
-    
+
     this.setState({
-      feedback: '',
+      input: '',
     });
   }
 
@@ -68,13 +69,17 @@ class HomeBuilding extends Component {
           <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <input
             type="text"
-            name="feedback"
-            value={this.state.feedback}
+            name="input"
+            value={this.state.input}
             onChange={(event) => this.handleOnChange(event)}
              />
              <input type="submit" value="Submit" />
            </form>
-           <p>{this.state.feedback}</p>
+           <ul>
+           {this.state.feedback.map(msg =>(
+             <li>{msg}</li>
+           ))}
+           </ul>
         <br/>
       </div>
     );
