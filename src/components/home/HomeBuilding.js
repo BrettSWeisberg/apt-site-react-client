@@ -5,8 +5,6 @@ class HomeBuilding extends Component {
     super(props)
       this.state = {
         counter: 0,
-        input: '',
-        feedback: []
       }
       this.onClick = this.onClick.bind(this);
 
@@ -16,6 +14,8 @@ class HomeBuilding extends Component {
     this.setState({
       counter: this.state.counter + 1,
     });
+
+    //this.state.counter += 1
   }
 
 
