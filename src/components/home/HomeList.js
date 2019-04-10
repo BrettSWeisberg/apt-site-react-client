@@ -10,6 +10,7 @@ class HomeList extends Component {
   constructor(props) {
     super(props)
       this.state = {
+        ordered: 'NO',
         order: [],
       }
       this.onClick = this.onClick.bind(this);
@@ -25,6 +26,7 @@ class HomeList extends Component {
 onClick = event => {
   const newArray = [].concat(this.props.buildings)
   this.setState({
+    ordered: 'YES',
     order: newArray.sort(function(a,b){
       var nameA = a.name.toUpperCase(); // ignore upper and lowercase
       var nameB = b.name.toUpperCase(); // ignore upper and lowercase
@@ -39,8 +41,16 @@ onClick = event => {
       return 0;
     })
   });
-  //  ReactDom.render(<HomeList />,document.getElementById('buildings'))
   }
+
+  renderBuildings = () => {
+    if(this.state.ordered === "NO"){
+    return  this.props.buildings.map(building =>
+     <HomeBuilding building={building}/>)
+   } else {
+     {return this.state.order.map(building => <HomeBuilding building={building}/>) }
+   }
+}
 
 
   render() {
@@ -55,7 +65,8 @@ onClick = event => {
           </div>
           <div id= "buildings">
             <h1 className = "title">Buildings</h1>
-              { this.state.order.map(building => <HomeBuilding building={building}/>) }
+              {this.renderBuildings()}
+              
           </div>
           <div>
         <h1 className = "title">Apartments</h1>
