@@ -9,8 +9,8 @@
 2. In the terminal type `npm install`
 3. In the terminal type `npm start`
 
-## Backend:
--The backend to this project is [here](https://github.com/BrettSWeisberg/rails-api-final).
+## Back-end:
+-The back-end to this project is [here](https://github.com/BrettSWeisberg/rails-api-final).
 
 ## Tests:
 There are currently no tests within the repo. All testing was done in the browser.
