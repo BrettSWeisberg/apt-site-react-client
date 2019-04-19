@@ -54,51 +54,60 @@ class ApartmentInput extends Component {
      <div>
       <form className="apartment-form" onSubmit={(event) => this.handleOnSubmit(event)}>
         <label className="form-label"> Create Apartment Below:</label>
-          <label className="field-label">Name:</label>
+          <div className="field">
+            <label className="field-label">Name:</label>
+             <input
+               type="text"
+               name="name"
+               value={this.state.name}
+               onChange={(event) => this.handleOnChange(event)} />
+          </div>
+          <br/>
+          <div className="field">
+           <label className="field-label">Square Feet:</label>
+           <input
+             type="number"
+             name="sf"
+             value={this.state.sf}
+             onChange={(event) => this.handleOnChange(event)} />
+          </div>
+          <br/>
+          <div className="field">
+           <label className="field-label">Rooms:</label>
+           <input
+             type="number"
+             name="rooms"
+             value={this.state.rooms}
+             onChange={(event) => this.handleOnChange(event)} />
+          </div>
+          <br/>
+          <div className="field">
+           <label className="field-label">Baths:</label>
+           <input
+             type="number"
+             name="baths"
+             value={this.state.baths}
+             onChange={(event) => this.handleOnChange(event)} />
+          </div>
+          <br/>
+          <div className="field">
+           <label className="field-label">Price:</label>
+           <input
+             type="number"
+             name="price"
+             value={this.state.price}
+             onChange={(event) => this.handleOnChange(event)} />
+          </div>
+          <br/>
+          <div className="field">
+           <label className="field-label">Description:</label>
            <input
              type="text"
-             name="name"
-             value={this.state.name}
+             name="description"
+             value={this.state.description}
              onChange={(event) => this.handleOnChange(event)} />
-         <br/>
-         <label className="field-label">Square Feet:</label>
-         <input
-           type="number"
-           name="sf"
-           value={this.state.sf}
-           onChange={(event) => this.handleOnChange(event)} />
-         <br/>
-
-         <label className="field-label">Rooms:</label>
-         <input
-           type="number"
-           name="rooms"
-           value={this.state.rooms}
-           onChange={(event) => this.handleOnChange(event)} />
-         <br/>
-
-         <label className="field-label">Baths:</label>
-         <input
-           type="number"
-           name="baths"
-           value={this.state.baths}
-           onChange={(event) => this.handleOnChange(event)} />
-         <br/>
-         <label className="field-label">Price:</label>
-         <input
-           type="number"
-           name="price"
-           value={this.state.price}
-           onChange={(event) => this.handleOnChange(event)} />
-         <br/>
-         <label className="field-label">Description:</label>
-         <input
-           type="text"
-           name="description"
-           value={this.state.description}
-           onChange={(event) => this.handleOnChange(event)} />
-         <br/>
-
+          </div>
+          <br/>
          <input className="button" type="submit" value="Submit" />
      </form>
       </div>
