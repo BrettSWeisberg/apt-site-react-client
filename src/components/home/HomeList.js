@@ -28,8 +28,8 @@ onClick = event => {
   this.setState({
     ordered: 'YES',
     order: newArray.sort(function(a,b){
-      var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-      var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      var nameA = a.name.toUpperCase();
+      var nameB = b.name.toUpperCase();
       if (nameA < nameB) {
         return -1;
       }
@@ -37,7 +37,6 @@ onClick = event => {
         return 1;
       }
 
-      // names must be equal
       return 0;
     })
   });
@@ -66,7 +65,7 @@ onClick = event => {
           <div id= "buildings">
             <h1 className = "title">Buildings</h1>
               {this.renderBuildings()}
-              
+
           </div>
           <div>
         <h1 className = "title">Apartments</h1>

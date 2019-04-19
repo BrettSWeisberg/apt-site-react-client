@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
 class BuildingInput extends Component {
   constructor(props) {
@@ -43,13 +44,10 @@ class BuildingInput extends Component {
 
   render() {
     return (
-
-  <section className= "section">
-    <span className= "is-medium">
-      <label className= "label">Create Apartment Buildings Below:</label>
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
+      <form className="building-form" onSubmit={(event) => this.handleOnSubmit(event)}>
+        <label className= "form-label">Create Apartment Buildings Below:</label>
           <div className="field">
-            <label className= "label">Name:</label>
+            <label className="field-label">Name:</label>
               <input
                 type="text"
                 name="name"
@@ -57,37 +55,35 @@ class BuildingInput extends Component {
                 onChange={(event) => this.handleOnChange(event)} />
             </div>
           <br/>
-        <div className="field">
-          <label className= "label">Address:</label>
-          <input
-            type="text"
-            name="address"
-            value={this.state.address}
-            onChange={(event) => this.handleOnChange(event)} />
-          </div>
+            <div className="field">
+              <label className="field-label">Address:</label>
+              <input
+                type="text"
+                name="address"
+                value={this.state.address}
+                onChange={(event) => this.handleOnChange(event)} />
+            </div>
           <br/>
-
-          <label className= "label">Description:</label>
-          <input
-            type="text"
-            name="description"
-            value={this.state.description}
-            onChange={(event) => this.handleOnChange(event)} />
+            <div className="field">
+              <label className="field-label">Description:</label>
+              <input
+                type="text"
+                name="description"
+                value={this.state.description}
+                onChange={(event) => this.handleOnChange(event)} />
+            </div>
           <br/>
-          <label className= "label">Units:</label>
+          <div className="field">
+          <label className="field-label">Units:</label>
           <input
             type="number"
             name="units"
             value={this.state.units}
             onChange={(event) => this.handleOnChange(event)} />
+            </div>
           <br/>
-
-
-
-            <input type="submit" value="Submit" />
+            <input className="button" type="submit" value="Submit" />
         </form>
-        </span>
-      </section>
     );
   }
 };
