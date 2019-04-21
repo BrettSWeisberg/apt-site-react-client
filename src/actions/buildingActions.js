@@ -23,7 +23,6 @@ export function fetchBuildings() {
 }
 
 export const addBuilding = building => {
-  console.log('C')
   let data = {
     method: 'POST',
     headers: {
@@ -38,7 +37,6 @@ export const addBuilding = building => {
     fetch(url, data)
       .then(response => response.json())
       .then(building => {
-        console.log('D')
         dispatch({
         type: 'ADD_BUILDING',
         payload: building

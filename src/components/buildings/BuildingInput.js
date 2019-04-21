@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import  "./Buildings.css";
 
 class BuildingInput extends Component {
   constructor(props) {
@@ -28,12 +28,7 @@ class BuildingInput extends Component {
       description: this.state.description,
       units: this.state.units
     };
-
-    console.log('A')
     this.props.addBuilding(data);
-    console.log('B')
-
-
     this.setState({
       name: '',
       address: '',
@@ -44,7 +39,9 @@ class BuildingInput extends Component {
 
   render() {
     return (
-      <form className="building-form" onSubmit={(event) => this.handleOnSubmit(event)}>
+      <div className="building-form">
+      <form  onSubmit={(event) => this.handleOnSubmit(event)}>
+      <div className="building-template">
         <label className= "form-label">Create Apartment Buildings Below:</label>
           <div className="field">
             <label className="field-label">Name:</label>
@@ -81,9 +78,11 @@ class BuildingInput extends Component {
             value={this.state.units}
             onChange={(event) => this.handleOnChange(event)} />
             </div>
+          </div>
           <br/>
             <input className="button" type="submit" value="Submit" />
         </form>
+      </div>
     );
   }
 };

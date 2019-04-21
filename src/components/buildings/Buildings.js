@@ -11,9 +11,11 @@ class Buildings extends Component {
   render() {
 
     return(
-      <ul>
-        {this.renderBuildings()}
-      </ul>
+      <div>
+        <ul>
+          {this.renderBuildings()}
+        </ul>
+      </div>
     );
   }
 };
