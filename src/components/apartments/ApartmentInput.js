@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import  "./Apartments.css";
 
 class ApartmentInput extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ class ApartmentInput extends Component {
   render() {
 
     return (
-     <div>
+     <div className="apartment-template">
       <form className="apartment-form" onSubmit={(event) => this.handleOnSubmit(event)}>
         <label className="form-label"> Create Apartment Below:</label>
           <div className="field">

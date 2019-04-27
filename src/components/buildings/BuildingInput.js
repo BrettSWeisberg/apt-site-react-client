@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  "./Buildings.css";
+import { Button, Form } from 'react-bootstrap';
 
 class BuildingInput extends Component {
   constructor(props) {
@@ -39,18 +40,18 @@ class BuildingInput extends Component {
 
   render() {
     return (
-      <div className="building-form">
-      <form  onSubmit={(event) => this.handleOnSubmit(event)}>
+    <div className="building-form">
+      <Form  onSubmit={(event) => this.handleOnSubmit(event)}>
       <div className="building-template">
-        <label className= "form-label">Create Apartment Buildings Below:</label>
-          <div className="field">
+        <Form.Label className= "form-label">Create Apartment Buildings Below:</Form.Label>
+          <Form.Group controlId="formBasicName">
             <label className="field-label">Name:</label>
-              <input
+              <Form.Control
                 type="text"
                 name="name"
                 value={this.state.name}
                 onChange={(event) => this.handleOnChange(event)} />
-            </div>
+          </Form.Group>
           <br/>
             <div className="field">
               <label className="field-label">Address:</label>
@@ -78,11 +79,13 @@ class BuildingInput extends Component {
             value={this.state.units}
             onChange={(event) => this.handleOnChange(event)} />
             </div>
+            <Button className="Button" type="submit" value="Submit">
+              Submit
+            </Button>
           </div>
-          <br/>
-            <input className="button" type="submit" value="Submit" />
-        </form>
-      </div>
+
+        </Form>
+    </div>
     );
   }
 };
