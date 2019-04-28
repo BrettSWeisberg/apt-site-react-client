@@ -18,7 +18,7 @@ class App extends Component {
         <div className="navbar-end">
           <div className="buttons">
             <div className="button is-primary"><Link to={'/'} className="nav-link">Home</Link></div>
-            <div className="button is-primary"><Link to={'/building/new'} className="nav-link">Create Building</Link></div>
+            <div className="button is-primary"><Link to={'/building/new'} className="nav-link">Manager Controls</Link></div>
             <div className="button is-primary"><Link to={'/aboutus'} className="nav-link">About Us</Link></div>
             </div>
           </div>

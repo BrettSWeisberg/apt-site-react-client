@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  "./Buildings.css";
 import { Button, Form } from 'react-bootstrap';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 
 class BuildingInput extends Component {
   constructor(props) {
@@ -40,51 +41,47 @@ class BuildingInput extends Component {
 
   render() {
     return (
-    <div className="container">
-      <form onSubmit={(event) => this.handleOnSubmit(event)}>
-        <h3 className= "form-label">Create Apartment Buildings Below:</h3>
-          <div className="form-group">
-            <label className="field-label">Name:</label>
-              <input
-                type="text"
-                name="name"
-                value={this.state.name}
-                onChange={(event) => this.handleOnChange(event)} />
-          </div>
-          <br/>
-            <div className="form-group">
-              <label className="field-label">Address:</label>
-              <input
-                type="text"
-                name="address"
-                value={this.state.address}
-                onChange={(event) => this.handleOnChange(event)} />
-            </div>
-          <br/>
-            <div className="form-group">
-              <label className="field-label">Description:</label>
-              <input
-                type="text"
-                name="description"
-                value={this.state.description}
-                onChange={(event) => this.handleOnChange(event)} />
-            </div>
-          <br/>
-          <div className="form-group">
-          <label className="field-label">Units:</label>
-          <input
-            type="number"
-            name="units"
-            value={this.state.units}
-            onChange={(event) => this.handleOnChange(event)} />
-            </div>
-            <Button className="Button" type="submit" value="Submit">
-              Submit
-            </Button>
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol md="6">
 
-
-        </form>
-    </div>
+              <form onSubmit={(event) => this.handleOnSubmit(event)}>
+                <h3 className= "className="h5 text-center mb-4>Create Apartment Buildings Below:</h3>
+                <MDBInput
+                  label="Name"
+                  type="text"
+                  name="name"
+                  value={this.state.name}
+                  onChange={(event) => this.handleOnChange(event)}
+                />
+                <MDBInput
+                  label="Address"
+                  type="text"
+                  name="address"
+                  value={this.state.address}
+                  onChange={(event) => this.handleOnChange(event)}
+                />
+                <MDBInput
+                  label="Description"
+                  type="text"
+                  name="description"
+                  value={this.state.description}
+                  onChange={(event) => this.handleOnChange(event)}
+                />
+                <MDBInput
+                  label="Units"
+                  type="number"
+                  name="units"
+                  value={this.state.units}
+                  onChange={(event) => this.handleOnChange(event)}
+                />
+                <MDBBtn color="primary" type="submit">
+                  Submit
+                </MDBBtn>
+              </form>
+          </MDBCol>
+       </MDBRow>
+     </MDBContainer>
     );
   }
 };
