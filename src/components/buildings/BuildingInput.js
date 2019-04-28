@@ -40,20 +40,19 @@ class BuildingInput extends Component {
 
   render() {
     return (
-    <div className="building-form">
-      <Form  onSubmit={(event) => this.handleOnSubmit(event)}>
-      <div className="building-template">
-        <Form.Label className= "form-label">Create Apartment Buildings Below:</Form.Label>
-          <Form.Group controlId="formBasicName">
+    <div className="container">
+      <form onSubmit={(event) => this.handleOnSubmit(event)}>
+        <h3 className= "form-label">Create Apartment Buildings Below:</h3>
+          <div className="form-group">
             <label className="field-label">Name:</label>
-              <Form.Control
+              <input
                 type="text"
                 name="name"
                 value={this.state.name}
                 onChange={(event) => this.handleOnChange(event)} />
-          </Form.Group>
+          </div>
           <br/>
-            <div className="field">
+            <div className="form-group">
               <label className="field-label">Address:</label>
               <input
                 type="text"
@@ -62,7 +61,7 @@ class BuildingInput extends Component {
                 onChange={(event) => this.handleOnChange(event)} />
             </div>
           <br/>
-            <div className="field">
+            <div className="form-group">
               <label className="field-label">Description:</label>
               <input
                 type="text"
@@ -71,7 +70,7 @@ class BuildingInput extends Component {
                 onChange={(event) => this.handleOnChange(event)} />
             </div>
           <br/>
-          <div className="field">
+          <div className="form-group">
           <label className="field-label">Units:</label>
           <input
             type="number"
@@ -82,9 +81,9 @@ class BuildingInput extends Component {
             <Button className="Button" type="submit" value="Submit">
               Submit
             </Button>
-          </div>
 
-        </Form>
+
+        </form>
     </div>
     );
   }
