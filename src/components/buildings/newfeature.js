@@ -17,9 +17,12 @@
 //           <div>description:{building.description}</div>
 //           <div>Units:{building.units}</div>
 //           <button onClick={() => this.props.deleteBuilding(building.id)}> Delete </button>
-//           <div>
-//           <ApartmentsContainer building={building}/>
-//           </div>
+//           <Switch>
+//             <div>
+//               <Link to={`/buildings/${building.id}`}>{building.name} Apartments</Link>
+//               <Route path="/buildings/:buildingId" Component= {building} />
+//             </div>
+//           </Switch>
 //         </li>
 //       </div>
 //     );

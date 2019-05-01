@@ -17,12 +17,9 @@ class Building extends Component {
           <div>description:{building.description}</div>
           <div>Units:{building.units}</div>
           <button onClick={() => this.props.deleteBuilding(building.id)}> Delete </button>
-          <Router>
-            <div>
-              <Link to={`/buildings/${building.id}`}>{building.name} Apartments</Link>
-              <Route path="/buildings/:buildingId" render={(building) => <ApartmentsContainer building={building}/>} />
-            </div>
-          </Router>
+          <div>
+          <ApartmentsContainer building={building}/>
+          </div>
         </li>
       </div>
     );
